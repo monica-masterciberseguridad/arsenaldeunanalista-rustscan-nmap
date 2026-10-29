@@ -1,0 +1,27 @@
+COMPARATIVA: RUSTSCAN + NMAP
+El Arsenal de un Analista
+
+RustScan y Nmap se complementan porque realizan tareas distintas dentro del análisis de puertos y servicios.
+
+RustScan se utiliza para descubrir rápidamente qué puertos TCP responden como abiertos. Después puede pasar los puertos detectados a Nmap, que realiza una inspección más detallada, como identificar los servicios y sus versiones.
+
+Ejemplo práctico realizado
+Objetivo: scanme.nmap.org (45.33.32.156).
+
+En el análisis principal, RustScan detectó los puertos 22, 80 y 9929. Nmap permitió identificar:
+- 22/tcp: OpenSSH 6.6.1p1.
+- 80/tcp: Apache httpd 2.4.7 (Ubuntu).
+- 9929/tcp: nping-echo.
+
+En una prueba posterior centrada en la web, RustScan detectó el puerto 80 y Nmap identificó Apache httpd 2.4.7. En un escaneo directo separado, Nmap informó que el puerto 80 estaba abierto y que el 443 estaba cerrado.
+
+¿Por qué trabajar con ambas herramientas?
+- RustScan ayuda a localizar puertos abiertos de forma rápida.
+- Nmap profundiza en los puertos encontrados e identifica servicios y versiones.
+- El flujo combinado reduce pasos manuales y permite guardar resultados reproducibles para su análisis.
+- Las pruebas específicas de Nmap, como la consulta de la cabecera HTTP o las huellas de claves SSH, aportan información adicional después del descubrimiento inicial.
+
+Conclusión
+RustScan facilita la fase de descubrimiento y Nmap aporta detalle técnico. Utilizarlas juntas permite pasar de una lista de puertos abiertos a una descripción más útil de los servicios expuestos. Los resultados obtenidos son información de enumeración: identificar una versión o un puerto abierto no demuestra por sí solo que exista una vulnerabilidad.
+
+Nota: la comprobación directa de Nmap sobre el puerto 443 fue independiente; no debe atribuirse ese resultado a RustScan.

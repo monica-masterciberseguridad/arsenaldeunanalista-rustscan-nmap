@@ -1,0 +1,11 @@
+# Nmap 7.992 scan initiated Thu Oct 29 20:49:17 2026 as: nmap -vvv -p 80 -4 -sV --reason -oN prueba-conjunta-web-ajustada.txt 45.33.32.156
+Nmap scan report for scanme.nmap.org (45.33.32.156)
+Host is up, received echo-reply ttl 48 (0.54s latency).
+Scanned at 2026-10-29 20:49:19 Hora estándar romance for 7s
+
+PORT   STATE SERVICE REASON         VERSION
+80/tcp open  http    syn-ack ttl 48 Apache httpd 2.4.7 ((Ubuntu))
+
+Read data files from: C:\Program Files (x86)\Nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Thu Oct 29 20:49:26 2026 -- 1 IP address (1 host up) scanned in 8.45 seconds
