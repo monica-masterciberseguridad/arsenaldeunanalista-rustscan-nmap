@@ -1,0 +1,14 @@
+# Nmap 7.992 scan initiated Tue Oct 27 21:33:26 2026 as: nmap -vvv -p 80,22,9929 -4 -sV -oN resultados-rustscan-nmap-final.txt 45.33.32.156
+Nmap scan report for scanme.nmap.org (45.33.32.156)
+Host is up, received echo-reply ttl 48 (0.16s latency).
+Scanned at 2026-10-27 21:33:27 Hora estándar romance for 6s
+
+PORT     STATE SERVICE    REASON         VERSION
+22/tcp   open  ssh        syn-ack ttl 48 OpenSSH 6.6.1p1 Ubuntu 2ubuntu2.13 (Ubuntu Linux; protocol 2.0)
+80/tcp   open  http       syn-ack ttl 48 Apache httpd 2.4.7 ((Ubuntu))
+9929/tcp open  nping-echo syn-ack ttl 48 Nping echo
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+Read data files from: C:\Program Files (x86)\Nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Tue Oct 27 21:33:33 2026 -- 1 IP address (1 host up) scanned in 7.41 seconds
